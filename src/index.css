@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #fdf2f8, #d1fae5);
+  color: #374151;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Dancing Script', cursive;
+  color: #be185d;
+}
+
+a {
+  color: #ec4899;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #be185d;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Removed .play-button since it's not used in MusicPlayer.jsx */

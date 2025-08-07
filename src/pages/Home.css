@@ -1,0 +1,393 @@
+.home-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.5rem;
+    background: linear-gradient(to bottom right, #fdf2f8, #d1fae5);
+    overflow-y: auto;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  .header {
+    width: 100%;
+    max-width: 600px;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+  
+  .fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 245, 247, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+    padding: 0.5rem;
+    overflow-y: auto;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: transparent;
+    color: #831843;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    border: 1px solid #f9a8d4;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .close-button:hover {
+    background: #fce7f3;
+    color: #be185d;
+  }
+  
+  .close-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(219, 39, 119, 0.2);
+  }
+  
+  .fullscreen-menu-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #831843;
+    margin-bottom: 1rem;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .fullscreen-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+    width: 90%;
+    max-width: 250px;
+    overflow-x: hidden;
+  }
+  
+  .main-content {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 2px solid #f9a8d4;
+    border-radius: 1rem;
+    background: white;
+    padding: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  .main-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #831843;
+    margin-bottom: 0.75rem;
+    font-family: 'Dancing Script', cursive;
+    width: 100%;
+    word-wrap: break-word;
+  }
+  
+  .typing-text {
+    font-size: 0.7rem;
+    color: #be185d;
+    max-width: 100%;
+    margin: 0 auto 0.75rem;
+    text-align: center;
+    word-wrap: break-word;
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .typing-text::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    background-color: #f472b6;
+    animation: blink-caret 0.75s step-end infinite;
+    vertical-align: bottom;
+    margin-left: 2px;
+    height: 1em;
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .desktop-menu {
+    display: none;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-top: 0.75rem;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  .memory-button {
+    background: #fff0f5;
+    color: #a21caf;
+    border: 1px solid #f9a8d4;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    box-shadow: 0 1px 2px rgba(255, 182, 193, 0.2);
+    font-size: 0.7rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    width: 100%; /* Повернуто повну ширину */
+    margin-bottom: 0.25rem;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .memory-button:hover {
+    background: #ffe4e1;
+    color: #7e22ce;
+  }
+  
+  .memory-button:active {
+    transform: scale(0.95);
+  }
+  
+  .back-button {
+    background: transparent;
+    color: #ec4899;
+    border: 1px solid #f9a8d4;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    font-size: 0.7rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%; /* Повернуто повну ширину */
+    box-sizing: border-box;
+  }
+  
+  .back-button:hover {
+    background: #fce7f3;
+    color: #be185d;
+  }
+  
+  .back-button:active {
+    transform: scale(0.95);
+  }
+  
+  .greeting-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 0.75rem;
+    width: 100%;
+  }
+  
+  .greeting-item {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .photo-greeting-container {
+    margin-top: 0.25rem;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .greeting-photo {
+    max-width: 100%;
+    height: auto;
+    transform: translateY(100%);
+    animation: slideUp 0.6s ease-out forwards;
+    border-radius: 0.5rem;
+    display: block;
+  }
+  
+  .greeting-item.visible .photo-greeting-container .greeting-photo {
+    animation: none;
+    transform: translateY(0);
+  }
+  
+  .greeting-text {
+    font-size: 0.7rem;
+    color: #be185d;
+    margin-top: 0.25rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  
+  .greeting-text::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    background-color: #f472b6;
+    animation: blink-caret 0.75s step-end infinite;
+    vertical-align: bottom;
+    margin-left: 2px;
+    height: 1em;
+  }
+  
+  /* Tablet (768px and above) */
+  @media (min-width: 768px) {
+    .home-container {
+      padding: 1.5rem;
+    }
+  
+    .header {
+      padding: 1rem;
+    }
+  
+    .fullscreen-menu {
+      padding: 1.5rem;
+    }
+  
+    .fullscreen-menu-title {
+      font-size: 2rem;
+    }
+  
+    .fullscreen-menu-links {
+      gap: 1.5rem;
+      width: 60%;
+      max-width: 400px;
+    }
+  
+    .main-content {
+      max-width: 600px;
+      padding: 2rem;
+      border-width: 4px;
+    }
+  
+    .main-title {
+      font-size: 2.5rem;
+    }
+  
+    .typing-text {
+      font-size: 1.125rem;
+      max-width: 500px;
+    }
+  
+    .desktop-menu {
+      display: flex;
+    }
+  
+    .memory-button {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      width: 100%; /* Повернуто повну ширину */
+      margin: 0 0;
+    }
+  
+    .back-button {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      width: 100%; /* Повернуто повну ширину */
+    }
+  
+    .greeting-buttons {
+      margin-top: 2rem;
+    }
+  
+    .greeting-photo {
+      border-radius: 0.75rem;
+    }
+  
+    .greeting-text {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Laptop (1158px and above) */
+  @media (min-width: 1158px) {
+    .home-container {
+      padding: 2rem;
+    }
+  
+    .header {
+      padding: 1.5rem;
+    }
+  
+    .fullscreen-menu {
+      display: none;
+    }
+  
+    .main-content {
+      max-width: 800px;
+      padding: 2.5rem;
+    }
+  
+    .main-title {
+      font-size: 3.5rem;
+    }
+  
+    .typing-text {
+      font-size: 1.5rem;
+      max-width: 600px;
+    }
+  
+    .desktop-menu {
+      gap: 1rem;
+    }
+  
+    .memory-button {
+      font-size: 1.125rem;
+      padding: 0.75rem 1.75rem;
+      width: 100%; /* Повернуто повну ширину */
+      margin: 0 0;
+    }
+  
+    .greeting-buttons {
+      margin-top: 2.5rem;
+    }
+  
+    .greeting-photo {
+      border-radius: 1rem;
+    }
+  
+    .greeting-text {
+      font-size: 1.125rem;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from, to { opacity: 0 }
+    50% { opacity: 1; }
+  }

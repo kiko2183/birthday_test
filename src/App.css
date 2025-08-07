@@ -1,0 +1,52 @@
+.app-container {
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #fdf2f8, #d1fae5);
+  color: #374151;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  height: 100%; /* Ensure full height for scrolling */
+  overflow-y: auto; /* Enable scrolling at the app level */
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.content-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('https://www.transparenttextures.com/patterns/flowers.png') repeat;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+/* Tablet (768px and above) */
+@media (min-width: 768px) {
+  .app-container {
+    padding: 1.5rem;
+  }
+
+  .content-wrapper {
+    max-width: 800px;
+  }
+}
+
+/* Laptop (1158px and above) */
+@media (min-width: 1158px) {
+  .app-container {
+    padding: 2rem;
+  }
+
+  .content-wrapper {
+    max-width: 1200px;
+  }
+}
